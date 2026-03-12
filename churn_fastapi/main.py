@@ -31,6 +31,9 @@ app = FastAPI()
 def check():
     return "It is working"
     
+@app.post('/predict')
+def predict(data:Data):
+
 
 
 
