@@ -41,8 +41,8 @@ def check():
 @app.post('/predict')
 def predict(data:Data):
     try:
-        input_data = np.array([data.gender, data.SeniorCitizen, data.Partner, data.Dependents,data.tenure,  data.PhoneService, data.MultipleLines, data.InternetService, data.OnlineSecurity,data.OnlineBackup, data.DeviceProtection, data.TechSupport,data.StreamingTV, data.StreamingMovies, data.Contract,data.PaperlessBilling, data.PaymentMethod, data.MonthlyCharges,data.TotalCharges]).reshape(-1,1)
-    
+        input_data = np.array([data.gender, data.SeniorCitizen, data.Partner, data.Dependents,data.tenure,  data.PhoneService, data.MultipleLines, data.InternetService, data.OnlineSecurity,data.OnlineBackup, data.DeviceProtection, data.TechSupport,data.StreamingTV, data.StreamingMovies, data.Contract,data.PaperlessBilling, data.PaymentMethod, data.MonthlyCharges,data.TotalCharges]).reshape(1,-1)
+        
     except Exception as e:
         raise HTTPException(status_code=404, detail = e)
 
@@ -54,3 +54,4 @@ def predict(data:Data):
 #        'OnlineBackup', 'DeviceProtection', 'TechSupport', 'StreamingTV',
 #        'StreamingMovies', 'Contract', 'PaperlessBilling', 'PaymentMethod',
 #        'MonthlyCharges', 'TotalCharges', 'Churn'
+
