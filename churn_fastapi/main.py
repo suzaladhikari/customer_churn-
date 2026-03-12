@@ -49,9 +49,5 @@ def predict(data:Data):
     prediction =  model.predict(input_data)
     return {"prediction": int(prediction)}
 
-# ###gender', 'SeniorCitizen', 'Partner', 'Dependents', 'tenure',
-#        'PhoneService', 'MultipleLines', 'InternetService', 'OnlineSecurity',
-#        'OnlineBackup', 'DeviceProtection', 'TechSupport', 'StreamingTV',
-#        'StreamingMovies', 'Contract', 'PaperlessBilling', 'PaymentMethod',
-#        'MonthlyCharges', 'TotalCharges', 'Churn'
+
 
