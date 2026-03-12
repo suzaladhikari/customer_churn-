@@ -2,6 +2,7 @@ import joblib
 from fastapi import FastAPI 
 from pydantic import BaseModel
 from fastapi import HTTPException
+import numpy as np 
 
 class Data(BaseModel):
     gender:int
@@ -33,7 +34,11 @@ def check():
     
 @app.post('/predict')
 def predict(data:Data):
-
+    try:
+        input_data = np.array([data.gender, data.SeniorCitizen, data.Partner, data.Dependents,data.tenure,  data.PhoneService, data.MultipleLines, data.InternetService, data.OnlineSecurity,data.OnlineBackup, data.DeviceProtection, data.TechSupport,data.StreamingTV, data.StreamingMovies, data.Contract,data.PaperlessBilling, data.PaymentMethod, data.MonthlyCharges,data.TotalCharges])
+    
+    except Exception as e:
+        raise HTTPException(status_code=404, detail = e)
 
 
 
