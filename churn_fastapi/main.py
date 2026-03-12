@@ -3,6 +3,12 @@ from fastapi import FastAPI
 from pydantic import BaseModel
 from fastapi import HTTPException
 import numpy as np 
+import os
+
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+model_path = os.path.join(BASE_DIR, "churnpredictor.pkl")
+
+model = joblib.load(model_path)
 
 class Data(BaseModel):
     gender:int
@@ -35,12 +41,13 @@ def check():
 @app.post('/predict')
 def predict(data:Data):
     try:
-        input_data = np.array([data.gender, data.SeniorCitizen, data.Partner, data.Dependents,data.tenure,  data.PhoneService, data.MultipleLines, data.InternetService, data.OnlineSecurity,data.OnlineBackup, data.DeviceProtection, data.TechSupport,data.StreamingTV, data.StreamingMovies, data.Contract,data.PaperlessBilling, data.PaymentMethod, data.MonthlyCharges,data.TotalCharges])
+        input_data = np.array([data.gender, data.SeniorCitizen, data.Partner, data.Dependents,data.tenure,  data.PhoneService, data.MultipleLines, data.InternetService, data.OnlineSecurity,data.OnlineBackup, data.DeviceProtection, data.TechSupport,data.StreamingTV, data.StreamingMovies, data.Contract,data.PaperlessBilling, data.PaymentMethod, data.MonthlyCharges,data.TotalCharges]).reshape(-1,1)
     
     except Exception as e:
         raise HTTPException(status_code=404, detail = e)
 
-
+    prediction =  model.predict(input_data)
+    return {"prediction": int(prediction)}
 
 # ###gender', 'SeniorCitizen', 'Partner', 'Dependents', 'tenure',
 #        'PhoneService', 'MultipleLines', 'InternetService', 'OnlineSecurity',
