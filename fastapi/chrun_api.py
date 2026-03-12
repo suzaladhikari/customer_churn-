@@ -1,4 +1,4 @@
-import joblib 
+import joblib
 from fastapi import FastAPI 
 from pydantic import BaseModel
 from fastapi import HTTPException
@@ -21,13 +21,16 @@ class Data(BaseModel):
     Contract:int
     PaperlessBilling:int = 0 
     PaymentMethod:int
-    MonthlyCharrges: int
+    MonthlyCharges: int
     TotalCharges:int 
 
 
 app = FastAPI()
 
-
+@app.get('/checking')
+def check():
+    return "It is working"
+    
 
 
 
