@@ -25,6 +25,11 @@ class Data(BaseModel):
     TotalCharges:int 
 
 
+app = FastAPI()
+
+
+
+
 
 # ###gender', 'SeniorCitizen', 'Partner', 'Dependents', 'tenure',
 #        'PhoneService', 'MultipleLines', 'InternetService', 'OnlineSecurity',
