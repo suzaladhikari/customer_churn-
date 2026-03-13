@@ -58,7 +58,6 @@ if page == ' 📊  Prediction':
         return 1 if value == "Yes" else 0
     
     phone_service = yes_no_to_int("Does customer have a Phone Service ?")
-    paperless_billing = yes_no_to_int("Do customer have Paperless Billing ?")
     multiple_lines = yes_no_to_int("Do customer have Multiple lines?")
     online_security = yes_no_to_int("Does customer have Online Security?")
     online_backup = yes_no_to_int("Does customer have Online Backup?")
@@ -71,5 +70,11 @@ if page == ' 📊  Prediction':
     mapping_internet = {'DSL':0, 'Fiber optic':1, 'No':2}
     internet_service = mapping_internet[internet_service]
 
-    
+    st.divider()
+    st.subheader(' 📝 Contract and Payment Details')
 
+    paperless_billing = yes_no_to_int("Does customer have Paperless Billing ?")
+
+    contract_type = st.selectbox("Type of Contract that the customer is enrolled in ",['Month-to-month' 'One year' 'Two year'])   
+    mapping_contract = {'Month-to-month':0, 'One year':1, 'Two year':2 }
+    contract_type = mapping_contract[contract_type]
