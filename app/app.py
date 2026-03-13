@@ -29,33 +29,36 @@ if page == ' 📊  Prediction':
     st.divider()
 
     st.subheader('🧍 Personal Info')
-    gender = st.selectbox("What is your gender",['Male','Female'])
+    gender = st.selectbox("Customer's Gender",['Male','Female'])
     gender = 1 if gender == 'Male' else 0
 
-    seniorcitizen = st.selectbox("Are you a Senior Citizen",['Yes','No'])
+    seniorcitizen = st.selectbox("Is Customer Senior Citizen",['Yes','No'])
     seniorcitizen = 1 if seniorcitizen == 'Yes' else 0
 
-    partner = st.selectbox("Do you have a partner?", ["Yes", "No"])
+    partner = st.selectbox("Does customer have a partner?", ["Yes", "No"])
     partner = 1 if partner == "Yes" else 0
     
-    dependents = st.selectbox("Do you have dependents?", ["Yes", "No"])
+    dependents = st.selectbox("Does customer have dependents?", ["Yes", "No"])
     dependents = 1 if dependents == "Yes" else 0
 
     st.divider()
     st.subheader(' 🌐 Package and Service Details')
 
-    tenure_input = st.text_input("Can you please the number of months you have used the service")
+    tenure_input = st.text_input("Number of months customer has used the service")
 
     try:
         tenure_input = int(tenure_input)
     except ValueError:
         tenure_input = None
-        st.warning("Please enter a valid weight in pounds.")
+        st.warning("Please enter the valid number.")
 
 
     def yes_no_to_int(label):
         value = st.selectbox(label, ["Yes", "No"])
         return 1 if value == "Yes" else 0
     
-    phone_service = yes_no_to_int("Do you have a Phone Service ?")
-    paperless_billing = yes_no_to_int("Do you have Paperless Billing ?")
+    phone_service = yes_no_to_int("Does customer have a Phone Service ?")
+    paperless_billing = yes_no_to_int("Do customer have Paperless Billing ?")
+    multiple_lines = yes_no_to_int("Do customer have Multiple lines?")
+    
+
