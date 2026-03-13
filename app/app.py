@@ -78,3 +78,8 @@ if page == ' 📊  Prediction':
     contract_type = st.selectbox("Type of Contract that the customer is enrolled in ",['Month-to-month' 'One year' 'Two year'])   
     mapping_contract = {'Month-to-month':0, 'One year':1, 'Two year':2 }
     contract_type = mapping_contract[contract_type]
+
+    payment_method = st.selectbox("Type of Payment Method used by the customer ",['Electronic check' 'Mailed check' 'Bank transfer (automatic)'
+    'Credit card (automatic)'])
+    mapping_payment = {'Electronic check':0, 'Mailed check':1,'Bank transfer (automatic)':2,   'Credit card (automatic)':3  }
+    payment_method = mapping_payment[payment_method]  
