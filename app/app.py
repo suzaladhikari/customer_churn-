@@ -82,4 +82,9 @@ if page == ' 📊  Prediction':
     payment_method = st.selectbox("Type of Payment Method used by the customer ",['Electronic check' 'Mailed check' 'Bank transfer (automatic)'
     'Credit card (automatic)'])
     mapping_payment = {'Electronic check':0, 'Mailed check':1,'Bank transfer (automatic)':2,   'Credit card (automatic)':3  }
-    payment_method = mapping_payment[payment_method]  
+    payment_method = mapping_payment[payment_method] 
+     
+    totalmonthlycharges = st.text_input("Total Monthly Charges paid by customer")
+    totalcharges = st.text_input("Total Charges paid by customer")
+    totalmonthlycharges = float(totalmonthlycharges) if totalmonthlycharges else 0
+    totalcharges = float(totalcharges) if totalcharges else 0
