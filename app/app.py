@@ -17,5 +17,12 @@ if page == '🏠 Home':
     st.header("Machine Learning and Customer Churn")
     st.subheader("Machine Learning has emerged as powerful tool for churn prediction due to their ability to effectively analyze large, high-dimensional, and dynamic customer datasets.Traditional churn prediction methods, such as rule-based systems and statistical modeling, often failto adequately capture customer behavior's complexities. Conversely, ML approaches like DecisionTrees (DTs), Random Forests (RFs), Support Vector Machines (SVMs), and boosting algorithms (e.g.,XGBoost, LightGBM, CatBoost) have demonstrated strong predictive capabilities with structureddatasets")
 
-    st.write("To explore more about the Models that we have used and to know about Machine Learning Models and Churn Detection, please go to  ℹ️ About the Model. Thank you!")
-    st.warning("⚠️ This is just a demo project. Please donot rely on the result for official conclusion. Thanks")
+    st.write("To explore more about the Models that we have used and to know about Machine Learning Models and Churn Detection, please go to  ℹ️ About the Model.")
+    st.warning("⚠️ This is just a demo project. Please donot rely on the result for official conclusion.")
+
+
+
+if page == ' 📊  Prediction':
+    st.header("Predict the chance of Customer Churn !!")
+    st.subheader("Just use the sidebar sliders and checkboxes to adjust the values, and the model will do the rest!")
+    
