@@ -32,4 +32,7 @@ if page == ' 📊  Prediction':
     gender = st.selectbox("What is your gender",['Male','Female'])
     gender = 1 if gender == 'Male' else 0
 
+    seniorcitizen = st.selectbox("Are you a Senior Citizen",['Yes','No'])
+    seniorcitizen = 1 if seniorcitizen == 'Yes' else 0
+
     
