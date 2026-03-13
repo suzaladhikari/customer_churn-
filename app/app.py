@@ -25,4 +25,11 @@ if page == '🏠 Home':
 if page == ' 📊  Prediction':
     st.header("Predict the chance of Customer Churn !!")
     st.subheader("Just use the sidebar sliders and checkboxes to adjust the values, and the model will do the rest!")
+
+    st.divider()
+
+    st.subheader('🧍 Personal Info')
+    gender = st.selectbox("What is your gender",['Male','Female'])
+    gender = 1 if gender == 'Male' else 0
+
     
