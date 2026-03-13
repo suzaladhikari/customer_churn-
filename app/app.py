@@ -60,5 +60,11 @@ if page == ' 📊  Prediction':
     phone_service = yes_no_to_int("Does customer have a Phone Service ?")
     paperless_billing = yes_no_to_int("Do customer have Paperless Billing ?")
     multiple_lines = yes_no_to_int("Do customer have Multiple lines?")
-    
+    online_security = yes_no_to_int("Does customer have Online Security?")
+    online_backup = yes_no_to_int("Does customer have Online Backup?")
+    device_protection = yes_no_to_int("Does customer have Device Protection?")
+    tech_support = yes_no_to_int("Does customer have Tech Support?")
+    streaming_tv = yes_no_to_int("Does customer have Streaming TV?")
+    streaming_movies = yes_no_to_int("Does customer have Streaming Movies?")
+
 
