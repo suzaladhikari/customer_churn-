@@ -1,5 +1,5 @@
 import streamlit as st
-
+import pandas as pd 
 ### This is the side bar 
 st.sidebar.title("Explore the options")
 page = st.sidebar.selectbox("",["🏠 Home",  " ℹ️ About the Model"," 📊  Prediction"," 👨‍💻 Developer"])
@@ -44,13 +44,13 @@ if page == ' 📊  Prediction':
     st.divider()
     st.subheader(' 🌐 Package and Service Details')
 
-    tenure_input = st.text_input("Number of months customer has used the service")
+    tenure_input = st.text_input("Number of months customer has used the service", value="0")
 
     try:
-        tenure_input = int(tenure_input)
+        tenure = int(tenure_input)
     except ValueError:
-        tenure_input = None
-        st.warning("Please enter the valid number.")
+        tenure = 0
+        st.warning("Please enter a valid number for tenure.")
 
 
     def yes_no_to_int(label):
@@ -66,7 +66,7 @@ if page == ' 📊  Prediction':
     streaming_tv = yes_no_to_int("Does customer have Streaming TV?")
     streaming_movies = yes_no_to_int("Does customer have Streaming Movies?")
 
-    internet_service = st.selectbox("Type of Internet Service that the customer is using ",['DSL' 'Fiber optic' 'No'])
+    internet_service = st.selectbox("Type of Internet Service that the customer is using ",['DSL', 'Fiber optic', 'No'])
     mapping_internet = {'DSL':0, 'Fiber optic':1, 'No':2}
     internet_service = mapping_internet[internet_service]
 
@@ -75,16 +75,49 @@ if page == ' 📊  Prediction':
 
     paperless_billing = yes_no_to_int("Does customer have Paperless Billing ?")
 
-    contract_type = st.selectbox("Type of Contract that the customer is enrolled in ",['Month-to-month' 'One year' 'Two year'])   
+    contract_type = st.selectbox("Type of Contract that the customer is enrolled in ",['Month-to-month','One year','Two year'])   
     mapping_contract = {'Month-to-month':0, 'One year':1, 'Two year':2 }
     contract_type = mapping_contract[contract_type]
 
-    payment_method = st.selectbox("Type of Payment Method used by the customer ",['Electronic check' 'Mailed check' 'Bank transfer (automatic)'
-    'Credit card (automatic)'])
+    payment_method = st.selectbox("Type of Payment Method used by the customer ",['Electronic check','Mailed check','Bank transfer (automatic)'
+    ,'Credit card (automatic)'])
     mapping_payment = {'Electronic check':0, 'Mailed check':1,'Bank transfer (automatic)':2,   'Credit card (automatic)':3  }
     payment_method = mapping_payment[payment_method] 
-     
+
     totalmonthlycharges = st.text_input("Total Monthly Charges paid by customer")
     totalcharges = st.text_input("Total Charges paid by customer")
     totalmonthlycharges = float(totalmonthlycharges) if totalmonthlycharges else 0
     totalcharges = float(totalcharges) if totalcharges else 0
+
+
+    st.text("")
+    st.markdown("---")
+    st.subheader("Thank you for all the details you have provided! Click predict to see the results! ")
+
+    dataframe_to_be_used = {
+        'Gender': gender,
+        'SeniorCitizen': seniorcitizen,
+        'Partner': partner,
+        'Dependents': dependents,
+        'Tenure': tenure_input,
+        'PhoneService': phone_service,
+        'MultipleLines': multiple_lines,
+        'InternetService': internet_service,
+        'OnlineSecurity': online_security,
+        'OnlineBackup': online_backup,
+        'DeviceProtection': device_protection,
+        'TechSupport': tech_support,
+        'StreamingTV': streaming_tv,
+        'StreamingMovies': streaming_movies,
+        'Contract': contract_type,
+        'PaperlessBilling': paperless_billing,
+        'PaymentMethod': payment_method,
+        'MonthlyCharges': totalmonthlycharges,
+        'TotalCharges': totalcharges
+    }
+
+    dataframe = pd.DataFrame([dataframe_to_be_used])
+
+    # Display the DataFrame
+    if st.button("DataFrame"):
+        st.write(dataframe)
