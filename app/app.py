@@ -124,8 +124,8 @@ if page == ' 📊  Prediction':
             response = requests.post('http://127.0.0.1:8000/predict', json=dataframe_to_be_used)
             if response.status_code == 200:
                 result = response.json()
-                st.success(result)
+                st.success(result['prediction'])
             else:
-                st.error("Oops! Something went wrong")
+                st.error("Oops! Something went wrong", response.status_code)
         except Exception as e:
             st.error(f"Error connecting to API: {e}")
