@@ -67,4 +67,9 @@ if page == ' 📊  Prediction':
     streaming_tv = yes_no_to_int("Does customer have Streaming TV?")
     streaming_movies = yes_no_to_int("Does customer have Streaming Movies?")
 
+    internet_service = st.selectbox("Type of Internet Service that the customer is using ",['DSL' 'Fiber optic' 'No'])
+    mapping_internet = {'DSL':0, 'Fiber optic':1, 'No':2}
+    internet_service = mapping_internet[internet_service]
+
+    
 
