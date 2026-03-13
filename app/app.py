@@ -1,5 +1,6 @@
 import streamlit as st
 import pandas as pd 
+import requests
 ### This is the side bar 
 st.sidebar.title("Explore the options")
 page = st.sidebar.selectbox("",["🏠 Home",  " ℹ️ About the Model"," 📊  Prediction"," 👨‍💻 Developer"])
@@ -117,7 +118,6 @@ if page == ' 📊  Prediction':
     }
 
     dataframe = pd.DataFrame([dataframe_to_be_used])
-
-    # Display the DataFrame
-    if st.button("DataFrame"):
-        st.write(dataframe)
+    
+    if st.button("Predict"):
+        response = requests.get('http://127.0.0.1:8000/predict', json = dataframe)
