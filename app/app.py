@@ -53,4 +53,7 @@ if page == ' 📊  Prediction':
         st.warning("Please enter a valid weight in pounds.")
 
 
-
+    def yes_no_to_int(label):
+        value = st.selectbox(label, ["Yes", "No"])
+        return 1 if value == "Yes" else 0
+    
