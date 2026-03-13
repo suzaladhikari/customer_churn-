@@ -57,3 +57,5 @@ if page == ' 📊  Prediction':
         value = st.selectbox(label, ["Yes", "No"])
         return 1 if value == "Yes" else 0
     
+    phone_service = yes_no_to_int("Do you have a Phone Service ?")
+    paperless_billing = yes_no_to_int("Do you have Paperless Billing ?")
