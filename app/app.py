@@ -121,7 +121,7 @@ if page == ' 📊  Prediction':
     
     if st.button("Predict"):
         try:
-            response = requests.post('http://127.0.0.1:8000/predict', json=dataframe_to_be_used)
+            response = requests.post('http://127.0.0.1:8001/predict', json=dataframe_to_be_used)
             if response.status_code == 200:
                 result = response.json()
                 st.success(result['prediction'])

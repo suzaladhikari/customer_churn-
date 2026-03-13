@@ -29,8 +29,8 @@ class Data(BaseModel):
     Contract:int
     PaperlessBilling:int = 0 
     PaymentMethod:int
-    MonthlyCharges: int
-    TotalCharges:int 
+    MonthlyCharges: float
+    TotalCharges:float 
 
 
 app = FastAPI()
@@ -45,7 +45,7 @@ async def predict(data:Data):
     proba = model.predict_proba(input_dataframe)[:,1]
     prediction = (proba >= 0.44).astype(int)
 
-    return (prediction)
+    return {"prediction": int(prediction[0])}
 
 
 
