@@ -35,4 +35,6 @@ if page == ' 📊  Prediction':
     seniorcitizen = st.selectbox("Are you a Senior Citizen",['Yes','No'])
     seniorcitizen = 1 if seniorcitizen == 'Yes' else 0
 
+    partner = st.selectbox("Do you have a partner?", ["Yes", "No"])
+    partner = 1 if partner == "Yes" else 0
     
