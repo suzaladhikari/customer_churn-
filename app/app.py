@@ -96,11 +96,11 @@ if page == ' 📊  Prediction':
     st.subheader("Thank you for all the details you have provided! Click predict to see the results! ")
 
     dataframe_to_be_used = {
-        'Gender': gender,
+        'gender': gender,
         'SeniorCitizen': seniorcitizen,
         'Partner': partner,
         'Dependents': dependents,
-        'Tenure': tenure_input,
+        'Tenure': tenure,
         'PhoneService': phone_service,
         'MultipleLines': multiple_lines,
         'InternetService': internet_service,
@@ -120,4 +120,12 @@ if page == ' 📊  Prediction':
     dataframe = pd.DataFrame([dataframe_to_be_used])
     
     if st.button("Predict"):
-        response = requests.get('http://127.0.0.1:8000/predict', json = dataframe)
+        try:
+            response = requests.post('http://127.0.0.1:8000/predict', json=dataframe_to_be_used)
+            if response.status_code == 200:
+                result = response.json()
+                st.success(result)
+            else:
+                st.error("Oops! Something went wrong")
+        except Exception as e:
+            st.error(f"Error connecting to API: {e}")

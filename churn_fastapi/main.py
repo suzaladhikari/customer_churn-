@@ -39,7 +39,8 @@ def check():
     return "It is working"
     
 @app.post('/predict')
-def predict(data:Data):
+async def predict(data:Data):
+    print(data.dict()) 
     try:
         input_data = np.array([data.gender, data.SeniorCitizen, data.Partner, data.Dependents,data.tenure,  data.PhoneService, data.MultipleLines, data.InternetService, data.OnlineSecurity,data.OnlineBackup, data.DeviceProtection, data.TechSupport,data.StreamingTV, data.StreamingMovies, data.Contract,data.PaperlessBilling, data.PaymentMethod, data.MonthlyCharges,data.TotalCharges]).reshape(1,-1)
         
