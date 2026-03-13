@@ -41,4 +41,16 @@ if page == ' 📊  Prediction':
     dependents = st.selectbox("Do you have dependents?", ["Yes", "No"])
     dependents = 1 if dependents == "Yes" else 0
 
-    
+    st.divider()
+    st.subheader(' 🌐 Package and Service Details')
+
+    tenure_input = st.text_input("Can you please the number of months you have used the service")
+
+    try:
+        tenure_input = int(tenure_input)
+    except ValueError:
+        tenure_input = None
+        st.warning("Please enter a valid weight in pounds.")
+
+
+
