@@ -38,3 +38,7 @@ if page == ' 📊  Prediction':
     partner = st.selectbox("Do you have a partner?", ["Yes", "No"])
     partner = 1 if partner == "Yes" else 0
     
+    dependents = st.selectbox("Do you have dependents?", ["Yes", "No"])
+    dependents = 1 if dependents == "Yes" else 0
+
+    
