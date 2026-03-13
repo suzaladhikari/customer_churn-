@@ -43,7 +43,9 @@ def check():
 async def predict(data:Data):
     input_dataframe = pd.DataFrame([data.dict()])
     proba = model.predict_proba(input_dataframe)[:,1]
-    prediction = proba
+    prediction = (proba >= 0.44).astype(int)
+
+    return (prediction)
 
 
 
