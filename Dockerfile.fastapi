@@ -6,3 +6,8 @@ WORKDIR /app
 
 COPY churn_fastapi/fastrequirements.txt /app/requirements.txt
 RUN pip install --no-cache-dir -r requirements.txt
+
+
+COPY churn_fastapi/main.py /app/
+COPY churn_fastapi/churnpredictor.pkl /app/
+
