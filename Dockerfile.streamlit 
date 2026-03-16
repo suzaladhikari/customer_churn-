@@ -1,2 +1,5 @@
 FROM python:3.12-slim
 
+WORKDIR /streamlit 
+
+COPY /app/streamlitrequirementx.txt /streamlit/requirements.txt
