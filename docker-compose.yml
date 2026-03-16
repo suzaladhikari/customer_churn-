@@ -1,1 +1,5 @@
 services:
+  fastapi:
+    build: 
+      context: . 
+      dockerfile: Dockerfile.fastapi
