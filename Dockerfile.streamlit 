@@ -2,11 +2,11 @@ FROM python:3.12-slim
 
 WORKDIR /streamlit 
 
-COPY /app/streamlitrequirementx.txt /streamlit/requirements.txt
+COPY app/streamlitrequirements.txt /streamlit/requirements.txt
 
 RUN pip install --no-cache-dir -r requirements.txt 
 
-COPY /app/app.py /streamlit
+COPY app/app.py /streamlit
 
 EXPOSE 8501
 
