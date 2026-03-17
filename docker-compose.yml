@@ -13,7 +13,7 @@ services:
   streamlit:
     build:
       context: . 
-      dockerfile: Dockerfile.streamlit
+      dockerfile: Dockerfile.churnstreamlit
     container_name: streamlit-container
     ports:
      - "8501:8501"
@@ -24,5 +24,5 @@ services:
 
 networks: 
   app-network: 
-    driver:bridge 
+    driver: bridge 
     
