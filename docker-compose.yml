@@ -17,6 +17,8 @@ services:
     container_name: streamlit-container
     ports:
      - "8501:8501"
+    environment:
+     - API_URL=http://fastapi:8000
     depends_on: 
      - fastapi 
     networks:
