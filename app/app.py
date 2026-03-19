@@ -119,7 +119,7 @@ if page == ' 📊  Prediction':
     }
 
     dataframe = pd.DataFrame([dataframe_to_be_used])
-    
+    API_URL = os.getenv("API_URL", "http://localhost:8000")
     if st.button("Predict"):
         try:
             response = requests.post('http://fastapi:8000/predict', json=dataframe_to_be_used)
