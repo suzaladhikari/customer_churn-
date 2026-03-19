@@ -122,7 +122,7 @@ if page == ' 📊  Prediction':
     API_URL = os.getenv("API_URL", "http://localhost:8000")
     if st.button("Predict"):
         try:
-            response = requests.post('http://fastapi:8000/predict', json=dataframe_to_be_used)
+            response = requests.post(f"{API_URL}/predict", json=dataframe_to_be_used)
             if response.status_code == 200:
                 result = response.json()
                 st.success(result['prediction'])
