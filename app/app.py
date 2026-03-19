@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd 
 import requests
+import os 
 ### This is the side bar 
 st.sidebar.title("Explore the options")
 page = st.sidebar.selectbox("",["🏠 Home",  " ℹ️ About the Model"," 📊  Prediction"," 👨‍💻 Developer"])
