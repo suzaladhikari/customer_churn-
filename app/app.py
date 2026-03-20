@@ -119,7 +119,7 @@ if page == ' 📊  Prediction':
     }
 
     dataframe = pd.DataFrame([dataframe_to_be_used])
-    API_URL = os.getenv("API_URL", "http://localhost:8000")
+    API_URL = os.getenv("API_URL", "https://customer-churn-9nt4.onrender.com")
     if st.button("Predict"):
         try:
             response = requests.post(f"{API_URL}/predict", json=dataframe_to_be_used)
