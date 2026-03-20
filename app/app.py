@@ -101,7 +101,7 @@ if page == ' 📊  Prediction':
         'SeniorCitizen': seniorcitizen,
         'Partner': partner,
         'Dependents': dependents,
-        'Tenure': tenure,
+        'tenure': tenure,
         'PhoneService': phone_service,
         'MultipleLines': multiple_lines,
         'InternetService': internet_service,
