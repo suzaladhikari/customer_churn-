@@ -156,8 +156,15 @@ if page == ' ℹ️ About the Model':
     st.header("Linear SVM")
 
     st.subheader("A Linear Support Vector Machine (SVM) model was used for the prediction of customer churn. The model was implemented using a pipeline that includes feature scaling with StandardScaler and classification using LinearSVC. Hyperparameter tuning was performed using GridSearchCV with StratifiedKFold cross-validation to find the optimal value of the regularization parameter 'C'. Class imbalance was handled using a 'balanced' class weight. The precision, recall, and F1-score of the model are as follows")  
+
     st.write("Precision: 47.57%")
     st.write("Recall: 49.73%")
     st.write("F1-Score: 48.63%")
 
     st.divider()
+
+    st.divider()
+
+    st.subheader("A Naive Bayes model was used for the prediction of customer churn. The model was implemented using GaussianNB, which assumes that the features follow a normal distribution. The var_smoothing parameter was set to improve numerical stability. The model was trained on the dataset and evaluated using precision, recall, and F1-score, which are reported below")
+
+    
