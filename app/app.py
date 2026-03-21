@@ -203,3 +203,26 @@ if page == ' ℹ️ About the Model':
     st.write("Precision: 62.12%")
     st.write("Recall: 48.66%")
     st.write("F1-Score: 54.57%")
+
+    st.divider()
+
+    st.title("Other metrics used to select the best model")
+
+    st.header("Here is the dataframe that shows the metrics and the value on all the models used!")
+
+
+
+
+    st.divider()
+
+    st.header("Selected Model : Random Forest Classifier")
+
+    st.subheader("Threshold Optimization Strategy")
+
+    st.write("Since this project focuses on customer churn prediction, the primary goal is to reduce False Negatives — cases where customers who are likely to churn are incorrectly classified as non-churners. Missing such customers can lead to direct business loss, as no retention action would be taken.")
+
+    st.write("To address this, probability thresholds were adjusted instead of relying on the default value of 0.5. The model's predicted probabilities were evaluated across a range of threshold values, and for each threshold, key metrics such as recall, precision, false negative rate (FNR), and false positive rate (FPR) were calculated.")
+
+    st.write("By lowering the threshold, the model becomes more sensitive to identifying churners, which increases recall and reduces the false negative rate. Although this may increase false positives, it is acceptable in this context because it is more important to identify potential churners than to miss them.")
+
+    st.write("The optimal threshold was selected based on achieving a high recall while minimizing the false negative rate, ensuring that the model effectively captures as many churn-risk customers as possible.")
