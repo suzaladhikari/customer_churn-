@@ -131,7 +131,6 @@ if page == ' 📊  Prediction':
         except Exception as e:
             st.error(f"Error connecting to API: {e}")
 if page == ' ℹ️ About the Model':
-    st.header("Models used for the prediction of Churn Detection")
 
     st.sidebar.markdown("""
     ---  
@@ -141,4 +140,12 @@ if page == ' ℹ️ About the Model':
 
     Please explore and learn from this tool, but do not interpret its output as an official conclusion for any major decision.
     """)
+
+    st.title("Models used for the prediction of Churn Detection")
+
+    st.header("Logisitc Regression")
+
+    st.subheader("Logistic Regression was used as an initial model for the prediction of customer churn. The model was hyperparamter tuned with parameters such as 'C' value and regularization penalties. The precision, recall, and f1-score of the model are as follows")
+
+
 
