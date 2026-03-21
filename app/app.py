@@ -163,8 +163,12 @@ if page == ' ℹ️ About the Model':
 
     st.divider()
 
-    st.divider()
 
     st.subheader("A Naive Bayes model was used for the prediction of customer churn. The model was implemented using GaussianNB, which assumes that the features follow a normal distribution. The var_smoothing parameter was set to improve numerical stability. The model was trained on the dataset and evaluated using precision, recall, and F1-score, which are reported below")
 
-    
+
+    st.write("Precision: 51.44%")
+    st.write("Recall: 71.66%")
+    st.write("F1-Score: 59.89%")  
+
+    st.divider()
