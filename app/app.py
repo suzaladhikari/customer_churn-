@@ -175,5 +175,9 @@ if page == ' ℹ️ About the Model':
     st.divider()
 
     st.header("Decision Trees")
-    
+
     st.subheader("A Decision Tree model was used for the prediction of customer churn. The model was implemented using the Gini impurity criterion, and class imbalance was handled using balanced class weights. Hyperparameter tuning was performed using GridSearchCV with StratifiedKFold cross-validation to optimize parameters such as max_depth, min_samples_split, min_samples_leaf, and max_features. The model's performance was evaluated using precision, recall, and F1-score, which are reported below")
+
+    st.write("Precision: 50.18%")
+    st.write("Recall: 75.67%")
+    st.write("F1-Score: 60.34%")
