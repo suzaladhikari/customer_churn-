@@ -130,3 +130,15 @@ if page == ' 📊  Prediction':
                 st.error("Oops! Something went wrong", response.status_code)
         except Exception as e:
             st.error(f"Error connecting to API: {e}")
+if page == ' ℹ️ About the Model':
+    st.header("Models used for the prediction of Churn Detection")
+
+    st.sidebar.markdown("""
+    ---  
+    ### ⚠️ Disclaimer
+
+    This application was developed as part of a data science project and is based on a relatively small and synthetic dataset. While the model demonstrates how the given parameters help determine the risk of customer churn, 
+
+    Please explore and learn from this tool, but do not interpret its output as an official conclusion for any major decision.
+    """)
+
