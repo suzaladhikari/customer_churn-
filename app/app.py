@@ -196,3 +196,10 @@ if page == ' ℹ️ About the Model':
 
     st.divider()
 
+    st.header("XGBoost")
+
+    st.subheader("An XGBoost model was used for the prediction of customer churn. XGBoost is a powerful gradient boosting algorithm that builds sequential decision trees, where each new tree corrects the errors of the previous ones. The model was initialized with a learning rate of 0.1. Hyperparameter tuning was performed using GridSearchCV with StratifiedKFold cross-validation to optimize parameters such as n_estimators, colsample_bytree, max_depth, and subsample. The final model was selected based on the best cross-validation performance and evaluated using precision, recall, and F1-score, which are reported below")
+
+    st.write("Precision: 62.12%")
+    st.write("Recall: 48.66%")
+    st.write("F1-Score: 54.57%")
