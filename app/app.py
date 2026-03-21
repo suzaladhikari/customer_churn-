@@ -163,6 +163,7 @@ if page == ' ℹ️ About the Model':
 
     st.divider()
 
+    st.header("Naive Bayes")
 
     st.subheader("A Naive Bayes model was used for the prediction of customer churn. The model was implemented using GaussianNB, which assumes that the features follow a normal distribution. The var_smoothing parameter was set to improve numerical stability. The model was trained on the dataset and evaluated using precision, recall, and F1-score, which are reported below")
 
@@ -172,3 +173,7 @@ if page == ' ℹ️ About the Model':
     st.write("F1-Score: 59.89%")  
 
     st.divider()
+
+    st.header("Decision Trees")
+    
+    st.subheader("A Decision Tree model was used for the prediction of customer churn. The model was implemented using the Gini impurity criterion, and class imbalance was handled using balanced class weights. Hyperparameter tuning was performed using GridSearchCV with StratifiedKFold cross-validation to optimize parameters such as max_depth, min_samples_split, min_samples_leaf, and max_features. The model's performance was evaluated using precision, recall, and F1-score, which are reported below")
