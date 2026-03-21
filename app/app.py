@@ -181,3 +181,18 @@ if page == ' ℹ️ About the Model':
     st.write("Precision: 50.18%")
     st.write("Recall: 75.67%")
     st.write("F1-Score: 60.34%")
+
+    st.divider()
+
+
+    st.header("Random Forest")
+
+    st.subheader("A Random Forest model was used for the prediction of customer churn. The model is an ensemble learning method that builds multiple decision trees and combines their outputs to improve performance and reduce overfitting. The Gini impurity criterion was used for splitting, and class imbalance was handled using balanced class weights. The number of estimators was analyzed using out-of-bag (OOB) scoring, and further hyperparameter tuning was performed using GridSearchCV with StratifiedKFold cross-validation to optimize parameters such as max_features, max_depth, min_samples_split, and min_samples_leaf. The model was evaluated using precision, recall, and F1-score, which are reported below")
+
+    st.write("Precision: 49.75%")
+    st.write("Recall: 81.02%")
+    st.write("F1-Score: 61.65%")
+
+
+    st.divider()
+
