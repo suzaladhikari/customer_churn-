@@ -137,7 +137,7 @@ if page == ' ℹ️ About the Model':
     ---  
     ### ⚠️ Disclaimer
 
-    This application was developed as part of a data science project and is based on a relatively small and synthetic dataset. While the model demonstrates how the given parameters help determine the risk of customer churn, 
+    This application was developed as part of a data science project and is based on a relatively small and synthetic dataset. While the model demonstrates how the given parameters help determine the risk of customer churn, it is not an official prediction is based on a small dataset.
 
     Please explore and learn from this tool, but do not interpret its output as an official conclusion for any major decision.
     """)
