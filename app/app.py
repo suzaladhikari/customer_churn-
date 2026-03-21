@@ -147,5 +147,7 @@ if page == ' ℹ️ About the Model':
 
     st.subheader("Logistic Regression was used as an initial model for the prediction of customer churn. The model was hyperparamter tuned with parameters such as 'C' value and regularization penalties. The precision, recall, and f1-score of the model are as follows")
 
-
+    st.write("Precision: 49.83%")
+    st.write("Recall:79.94%")
+    st.write("F1-Score:61.39%")
 
