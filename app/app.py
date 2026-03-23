@@ -226,3 +226,6 @@ if page == ' ℹ️ About the Model':
     st.write("By lowering the threshold, the model becomes more sensitive to identifying churners, which increases recall and reduces the false negative rate. Although this may increase false positives, it is acceptable in this context because it is more important to identify potential churners than to miss them.")
 
     st.write("The optimal threshold was selected based on achieving a high recall while minimizing the false negative rate, ensuring that the model effectively captures as many churn-risk customers as possible.")
+
+if page == ' 👨‍💻 Developer':
+    st.write("Hey there everybody!")
