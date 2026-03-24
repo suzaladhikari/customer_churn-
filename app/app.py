@@ -229,3 +229,4 @@ if page == ' ℹ️ About the Model':
 
 if page == ' 👨‍💻 Developer':
     st.write("Hey there everybody!")
+    st.write("hola")
