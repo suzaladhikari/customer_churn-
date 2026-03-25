@@ -47,9 +47,9 @@ customer-churn-prediction/
 │   ├── featureengineering.ipynb      # Feature engineering steps
 │   └── model.ipynb                   # Model training and evaluation
 │
-├── docker-compose.yml                # Multi-container Docker orchestration
-├── dockerfile.churnstreamlit         # Dockerfile for Streamlit frontend
-└── dockerfile.fastapi                # Dockerfile for FastAPI backend
+├── Docker-compose.yml                # Multi-container Docker orchestration
+├── Dockerfile.churnstreamlit         # Dockerfile for Streamlit frontend
+└── Dockerfile.fastapi                # Dockerfile for FastAPI backend
 ```
 
 ---
