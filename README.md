@@ -95,11 +95,11 @@ The backend is deployed on Render, allowing the app to access the model via a li
    - FastAPI Docs → http://localhost:8000/docs
 
 ## 🧠 How the System Works
-1. The user interacts with the Streamlit web application  
-2. User inputs are sent to the FastAPI backend  
-3. The backend processes the data and applies the trained ML model  
-4. The model returns a prediction (churn / not churn)  
-5. The result is displayed back on the Streamlit interface  
+1. The user interacts with the application through the Streamlit web interface.
+2. The information entered by the user is sent to the FastAPI backend for processing.
+3. The backend cleans and prepares the data, then applies the trained machine learning model.
+4. The model generates a prediction indicating whether the customer is likely to churn or not.
+5. The prediction is sent back and displayed on the Streamlit interface for the user to see.
 
 ---
 
