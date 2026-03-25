@@ -94,6 +94,7 @@ The project is organized in a modular and scalable way to reflect a real-world M
 6. **Access the application**
    - Streamlit App → http://localhost:8501  
    - FastAPI Docs → http://localhost:8000/docs
+   
 ## 🧠 How the System Works
 1. The user interacts with the Streamlit web application  
 2. User inputs are sent to the FastAPI backend  
