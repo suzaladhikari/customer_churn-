@@ -228,6 +228,12 @@ if page == ' ℹ️ About the Model':
     st.write("The optimal threshold was selected based on achieving a high recall while minimizing the false negative rate, ensuring that the model effectively captures as many churn-risk customers as possible.")
 
 if page == ' 👨‍💻 Developer':
-    st.write("Hey there everybody!")
-    st.write("hola")
-    st.write("Como estad")
+    st.title("Greetings 👋 ¡Hola! 👋 Bonjour")
+    st.text("")
+    st.subheader("""Hi, I'm Sujal Adhikari, a sophomore at Caldwell University and an aspiring Data Scientist.This churn prediction project is especially meaningful to me—it represents my first real step into applied machine learning and solving business problems using data.Through this project, I explored how companies can identify customers who are likely to leave, and how data-driven insights can help improve retention strategies. Building this from the ground up taught me not just the technical side of machine learning, but also the importance of data cleaning, feature engineering, and model evaluation.There were definitely challenges along the way, but each obstacle helped me grow stronger and more confident in my skills. Every late night debugging models and analyzing results was worth it.This project is just the beginning of my journey into data science. I’m excited to continue learning, building impactful projects, and turning data into meaningful insights.
+    """)
+    st.text("")
+    st.divider()
+    
+    st.subheader("Thank You 🙏 Gracias! 🙏 Merci")
+
