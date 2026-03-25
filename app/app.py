@@ -215,17 +215,19 @@ if page == ' ℹ️ About the Model':
 
     st.divider()
 
-    st.header("Selected Model : Random Forest Classifier")
+    st.title("Selected Model : Random Forest Classifier")
 
-    st.subheader("Threshold Optimization Strategy")
+    st.header("Threshold Optimization Strategy")
 
-    st.write("Since this project focuses on customer churn prediction, the primary goal is to reduce False Negatives — cases where customers who are likely to churn are incorrectly classified as non-churners. Missing such customers can lead to direct business loss, as no retention action would be taken.")
+    st.subheader("Since this project focuses on customer churn prediction, the primary goal is to reduce False Negatives — cases where customers who are likely to churn are incorrectly classified as non-churners. Missing such customers can lead to direct business loss, as no retention action would be taken.")
 
-    st.write("To address this, probability thresholds were adjusted instead of relying on the default value of 0.5. The model's predicted probabilities were evaluated across a range of threshold values, and for each threshold, key metrics such as recall, precision, false negative rate (FNR), and false positive rate (FPR) were calculated.")
+    st.subheader("To address this, probability thresholds were adjusted instead of relying on the default value of 0.5. The model's predicted probabilities were evaluated across a range of threshold values, and for each threshold, key metrics such as recall, precision, false negative rate (FNR), and false positive rate (FPR) were calculated.")
 
-    st.write("By lowering the threshold, the model becomes more sensitive to identifying churners, which increases recall and reduces the false negative rate. Although this may increase false positives, it is acceptable in this context because it is more important to identify potential churners than to miss them.")
+    st.subheader("By lowering the threshold, the model becomes more sensitive to identifying churners, which increases recall and reduces the false negative rate. Although this may increase false positives, it is acceptable in this context because it is more important to identify potential churners than to miss them.")
 
-    st.write("The optimal threshold was selected based on achieving a high recall while minimizing the false negative rate, ensuring that the model effectively captures as many churn-risk customers as possible.")
+    st.subheader("The optimal threshold was selected based on achieving a high recall while minimizing the false negative rate, ensuring that the model effectively captures as many churn-risk customers as possible.")
+
+    st.write("Below is the table that shows the thresholds tested with their respective metrics")
 
 if page == ' 👨‍💻 Developer':
     st.title("Greetings 👋 ¡Hola! 👋 Bonjour")
@@ -234,6 +236,16 @@ if page == ' 👨‍💻 Developer':
     """)
     st.text("")
     st.divider()
-    
+
     st.subheader("Thank You 🙏 Gracias! 🙏 Merci")
 
+        ##Side bar 
+    st.sidebar.title("Meet the developer")
+    st.sidebar.header("Sujal Adhikari")
+    st.sidebar.write("New York Metropolitan Area")
+    st.sidebar.write("Data Science | Data Analysis | Machine Learning")
+    st.text("")
+    st.sidebar.text("Thank you for trying out my first web app built with scikit-learn! This journey has had its challenges, but I'm proud to share something with real-life meaning. It's just the beginning—and purely educational for now. I’ll keep building and sharing more. Feel free to connect with me and follow my journey below!")
+    st.sidebar.markdown("[Github](https://github.com/suzaladhikari)", unsafe_allow_html=True)
+    st.sidebar.markdown("[Twitter](https://twitter.com/suzaladhikari_)", unsafe_allow_html=True)
+    st.sidebar.markdown("sujal.adhikari.ds@gmail.com")
