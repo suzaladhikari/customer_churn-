@@ -11,7 +11,10 @@ This is a complete end-to-end **MLOps-based Customer Churn Prediction system** t
 
 The project is designed to simulate a real-world production pipeline where a machine learning model is not only built but also deployed and made accessible through a web application.
 
-## Project Structure 
+## 📁 Project Structure
+
+The project is organized in a modular and scalable way to reflect a real-world MLOps pipeline:
+
 
 ```
 ├── .vscode/                     # VS Code configuration files
