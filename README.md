@@ -25,3 +25,12 @@ The project is designed to simulate a real-world production pipeline where a mac
 3. The backend processes the data and applies the trained ML model  
 4. The model returns a prediction (churn / not churn)  
 5. The result is displayed back on the Streamlit interface  
+
+---
+
+## 🎯 Project Goal
+The goal of this project is to:
+- Build a real-world machine learning application  
+- Understand end-to-end deployment using MLOps tools  
+- Create a scalable and production-ready system  
+- Apply data science concepts to solve business problems  
