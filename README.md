@@ -144,7 +144,7 @@ docker compose down
 **1. Clone the repository**
 
 ```bash
-git clone https://github.com/your-username/customer-churn-prediction.git
+git clone https://github.com/suzaladhikari/customer-churn-prediction.git
 cd customer-churn-prediction
 ```
 
