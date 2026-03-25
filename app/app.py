@@ -233,6 +233,7 @@ if page == ' ℹ️ About the Model':
 
     # Load the CSV into a DataFrame
     df = pd.read_csv(dataset_path)
+    df.drop(columns='Unnamed: 0', inplace=True) 
 
     # Display the DataFrame in Streamlit
     st.write("### Model Performance Data")
