@@ -65,6 +65,9 @@ customer-churn-prediction/
 | **Random Forest**   | **49.75%**| **81.02%** | **61.65%** |
 | XGBoost             | 62.12%    | 48.66% | 54.57%   |
 
+## Detailed overview of the metrics used to select the best model.
+
+![alt text](image-1.png)
 > ✅ **Random Forest** was selected as the production model based on its highest F1-Score and Recall — minimizing missed churn cases is the business priority.
 
 ## 🎯 Threshold Optimization Strategy
@@ -212,4 +215,3 @@ Result returned and displayed in Streamlit
 ## 📬 Contact
 
 Have questions or suggestions? Feel free to open an issue or reach out via GitHub.
-![alt text](image-1.png)
