@@ -18,3 +18,10 @@ The project is designed to simulate a real-world production pipeline where a mac
 - 🎨 Streamlit frontend for an interactive user interface  
 - 🐳 Containerized using Docker and Docker Compose  
 - ☁️ Backend deployed on Render for live API access  
+
+## 🧠 How the System Works
+1. The user interacts with the Streamlit web application  
+2. User inputs are sent to the FastAPI backend  
+3. The backend processes the data and applies the trained ML model  
+4. The model returns a prediction (churn / not churn)  
+5. The result is displayed back on the Streamlit interface  
