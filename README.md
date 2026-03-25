@@ -11,6 +11,39 @@ This is a complete end-to-end **MLOps-based Customer Churn Prediction system** t
 
 The project is designed to simulate a real-world production pipeline where a machine learning model is not only built but also deployed and made accessible through a web application.
 
+## Project Structure 
+
+```
+├── .vscode/                     # VS Code configuration files
+
+├── app/                         # Streamlit Frontend
+│   ├── app.py                   # Main Streamlit application
+│   └── streamlitrequirements.txt # Frontend dependencies
+
+├── churn_fastapi/               # FastAPI Backend
+│   ├── main.py                  # API endpoints for predictions
+│   ├── churnpredictor.pkl       # Trained ML model
+│   └── fastrequirements.txt     # Backend dependencies
+
+├── datasets/                    # Data files
+│   ├── churnData.csv            # Raw dataset
+│   ├── cleaned.csv              # Cleaned dataset
+│   ├── formodel.csv             # Processed dataset for training
+│   └── modelperformance.csv     # Model evaluation results
+
+├── EDA/                         # Exploratory Data Analysis
+│   └── eda.ipynb                # Data analysis and visualization
+
+├── Model Preparation/           # Model development pipeline
+│   ├── featureengineering.ipynb # Feature engineering steps
+│   └── model.ipynb              # Model training and evaluation
+
+├── docker-compose.yml           # Multi-container Docker setup
+├── dockerfile.churnstreamlit    # Dockerfile for Streamlit app
+├── dockerfile.fastapi           # Dockerfile for FastAPI backend
+```
+
+
 ### 🔑 Key Features
 - 📊 Predicts customer churn using a trained machine learning model  
 - 🧹 Includes data cleaning and preprocessing (handling null values, feature preparation)  
