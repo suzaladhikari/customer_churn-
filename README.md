@@ -55,6 +55,45 @@ The project is organized in a modular and scalable way to reflect a real-world M
 - 🐳 Containerized using Docker and Docker Compose  
 - ☁️ Backend deployed on Render for live API access  
 
+## Running the project and other dependencies locally 
+
+## 🐍 How to Run Locally
+
+1. **Clone this repository**  
+   Copy and paste the following commands in your terminal:
+
+   ```bash
+   git clone https://github.com/your-username/churn-prediction-mlops.git
+   cd churn-prediction-mlops
+   ```
+
+2. **Install required packages for Streamlit (frontend)**
+
+   ```bash
+   pip install -r app/streamlitrequirements.txt
+   ```
+
+3. **Install required packages for FastAPI (backend)**
+
+   ```bash
+   pip install -r churn_fastapi/fastrequirements.txt
+   ```
+
+4. **Run the FastAPI backend**
+
+   ```bash
+   uvicorn churn_fastapi.main:app --reload
+   ```
+
+5. **Run the Streamlit frontend**
+
+   ```bash
+   streamlit run app/app.py
+   ```
+
+6. **Access the application**
+   - Streamlit App → http://localhost:8501  
+   - FastAPI Docs → http://localhost:8000/docs
 ## 🧠 How the System Works
 1. The user interacts with the Streamlit web application  
 2. User inputs are sent to the FastAPI backend  
