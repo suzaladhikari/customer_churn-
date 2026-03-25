@@ -45,6 +45,16 @@ The project is organized in a modular and scalable way to reflect a real-world M
 ├── dockerfile.churnstreamlit    # Dockerfile for Streamlit app
 ├── dockerfile.fastapi           # Dockerfile for FastAPI backend
 ```
+## Machine Learning Models Performance
+
+| Model             | Precision | Recall  | F1-Score |
+|-------------------|-----------|--------|----------|
+| Logistic Regression | 49.83%   | 79.94% | 61.39%  |
+| Linear SVM         | 47.57%   | 49.73% | 48.63%  |
+| Naive Bayes        | 51.44%   | 71.66% | 59.89%  |
+| Decision Tree      | 50.18%   | 75.67% | 60.34%  |
+| Random Forest      | 49.75%   | 81.02% | 61.65%  |
+| XGBoost            | 62.12%   | 48.66% | 54.57%  |
 
 
 ### 🔑 Key Features
@@ -54,6 +64,8 @@ Uses a FastAPI backend to handle requests from the frontend and return predictio
 Provides an interactive user interface through a Streamlit application.
 The entire project is containerized using Docker and Docker Compose for consistent deployment.
 The backend is deployed on Render, allowing the app to access the model via a live API.
+
+
 ## Running the project and other dependencies locally 
 
 ## 🐍 How to Run Locally
