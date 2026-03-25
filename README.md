@@ -48,13 +48,12 @@ The project is organized in a modular and scalable way to reflect a real-world M
 
 
 ### 🔑 Key Features
-- 📊 Predicts customer churn using a trained machine learning model  
-- 🧹 Includes data cleaning and preprocessing (handling null values, feature preparation)  
-- ⚡ FastAPI backend for handling model inference requests  
-- 🎨 Streamlit frontend for an interactive user interface  
-- 🐳 Containerized using Docker and Docker Compose  
-- ☁️ Backend deployed on Render for live API access  
-
+Predicts whether a customer is likely to churn using a trained machine learning model.
+Performs data cleaning and preprocessing, including handling missing values and preparing features for modeling.
+Uses a FastAPI backend to handle requests from the frontend and return predictions.
+Provides an interactive user interface through a Streamlit application.
+The entire project is containerized using Docker and Docker Compose for consistent deployment.
+The backend is deployed on Render, allowing the app to access the model via a live API.
 ## Running the project and other dependencies locally 
 
 ## 🐍 How to Run Locally
@@ -94,7 +93,7 @@ The project is organized in a modular and scalable way to reflect a real-world M
 6. **Access the application**
    - Streamlit App → http://localhost:8501  
    - FastAPI Docs → http://localhost:8000/docs
-   
+
 ## 🧠 How the System Works
 1. The user interacts with the Streamlit web application  
 2. User inputs are sent to the FastAPI backend  
