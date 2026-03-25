@@ -62,6 +62,22 @@ customer-churn-prediction/
 
 > ✅ **Random Forest** was selected as the production model based on its highest F1-Score and Recall — minimizing missed churn cases is the business priority.
 
+## 🎯 Threshold Optimization Strategy
+
+In churn prediction, **False Negatives are the most costly error** — a customer predicted as "not churning" who actually does churn means losing them with no intervention.
+
+To address this, rather than using the default 0.5 probability threshold, the model's predicted probabilities were evaluated across a range of thresholds. For each threshold, the following metrics were tracked:
+
+| Metric | Description |
+|--------|-------------|
+| Recall | % of actual churners correctly identified |
+| Precision | % of predicted churners who actually churn |
+| False Negative Rate (FNR) | % of churners missed by the model |
+| False Positive Rate (FPR) | % of non-churners flagged incorrectly |
+
+> 📉 **Lowering the threshold** increases recall and reduces FNR — meaning fewer churners are missed. While this increases false positives, the business trade-off is acceptable: it is far better to offer retention incentives to a non-churner than to miss a customer who was about to leave.
+
+The optimal threshold was selected by maximizing recall while keeping the false negative rate as low as possible.
 ---
 
 ## 🔑 Key Features
