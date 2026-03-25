@@ -13,6 +13,11 @@ This project delivers an end-to-end **MLOps-based Customer Churn Prediction syst
 
 The system is designed to simulate a real-world production ML pipeline where a trained model is exposed via a FastAPI backend and consumed by a Streamlit frontend, with the entire stack orchestrated using Docker Compose.
 
+## 🌐 Live Demo
+
+👉 **[Try the app here](https://customerchurn944.streamlit.app/)**
+
+The application is live and hosted on Streamlit Cloud. No installation required — just open the link and start predicting!
 ---
 
 ## 📁 Project Structure
