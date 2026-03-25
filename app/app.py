@@ -212,7 +212,6 @@ if page == ' ℹ️ About the Model':
 
 
 
-
     st.divider()
 
     st.title("Selected Model : Random Forest Classifier")
@@ -229,6 +228,15 @@ if page == ' ℹ️ About the Model':
 
     st.write("Below is the table that shows the thresholds tested with their respective metrics")
 
+    current_dir = os.path.dirname(__file__)   # path to the current file (app.py)
+    dataset_path = os.path.join(current_dir, "../Datasets/threshold.csv")
+
+    # Load the CSV into a DataFrame
+    df = pd.read_csv(dataset_path)
+
+    # Display the DataFrame in Streamlit
+    st.write("### Model Performance Data")
+    st.dataframe(df)
 if page == ' 👨‍💻 Developer':
     st.title("Greetings 👋 ¡Hola! 👋 Bonjour")
     st.text("")
