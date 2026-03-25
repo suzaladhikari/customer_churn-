@@ -226,6 +226,8 @@ if page == ' ℹ️ About the Model':
 
     st.subheader("The optimal threshold was selected based on achieving a high recall while minimizing the false negative rate, ensuring that the model effectively captures as many churn-risk customers as possible.")
 
+    st.divider()
+
     st.write("Below is the table that shows the thresholds tested with their respective metrics")
 
     current_dir = os.path.dirname(__file__)   # path to the current file (app.py)
@@ -236,8 +238,11 @@ if page == ' ℹ️ About the Model':
     df.drop(columns='Unnamed: 0', inplace=True) 
 
     # Display the DataFrame in Streamlit
+
     st.write("### Model Performance Data")
     st.dataframe(df)
+
+    st.success("Selected Threshold: 0.44")
 if page == ' 👨‍💻 Developer':
     st.title("Greetings 👋 ¡Hola! 👋 Bonjour")
     st.text("")
